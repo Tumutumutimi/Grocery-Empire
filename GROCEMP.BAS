@@ -10,7 +10,7 @@
 100 SLEEP 1
 110 DO
 120 PRINT name$" have "; INT(cash); " cash and "; INT(items); " items and "; rating; "rating ."
-130 IF money > 7500 AND rating = 5 THEN
+130 IF INT(money) > 7500 AND rating = 5 THEN
 140    PRINT name$; "have become the greatest Supermarket in town, now your Supermarket is managed by the manager. Bye =)"
 150    BEEP
 160    END
@@ -47,7 +47,7 @@
 470 END IF
 480 LET itemsdecrease = items / 3
 490 LET items = items - itemsdecrease
-500 LET cash = cash + (itemsdecrease * (2 * rating))
+500 LET cash = cash + (itemsdecrease * 2.5)
 510 LET cash = cash - (items / (3 + rating))
 520 PRINT "Waiting for the day ."
 530 SLEEP 1
